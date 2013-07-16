@@ -8,21 +8,21 @@ namespace VarianceAlgorithm
 {
     class Variance
     {
-        public static int simple_variance(int[] values)
+        public static double simple_variance(double[] values)
         {
-            float total = 0;
-            float totaledSquared = 0;
-            float counter = 0;
+            double total = 0;
+            double totaledSquared = 0;
+            double counter = 0;
            
 
-            foreach (int value in values)
+            foreach (double value in values)
             {
                 counter ++;
                 total += value;
                 totaledSquared += value * value;
             }
 
-            return Convert.ToInt32((totaledSquared - ((total * total) / counter)) / (counter - 1));
+            return (totaledSquared - ((total * total) / counter)) / (counter - 1);
         }
     }
 }
